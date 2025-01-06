@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Adjust this to the correct path where your `index.html` resides
-          path: 'Currency-Convertor/Desktop/Personal-Projects/P5 - Currency Covertor'
+          path: './Desktop/Personal-Projects/P5 - Currency Covertor'
       
       - name: Deploy to GitHub Pages
         id: deployment
