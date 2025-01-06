@@ -1,4 +1,3 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -31,13 +30,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      
+      # If needed, you can add any build step here. E.g. building static files.
+      # For example, if you are using a build tool like Jekyll or others, include that step here.
+
+      # Upload the contents of the 'Currency-Convertor/Desktop/Personal-Projects/P5 - Currency Covertor' folder
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.Desktop/Personal-Projects/P5 - Currency Covertor'
+          # Adjust this to the correct path where your `index.html` resides
+          path: 'Currency-Convertor/Desktop/Personal-Projects/P5 - Currency Covertor'
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
